@@ -67,7 +67,7 @@ export const BookList = (props) => {
     <Box>
       <Box padding="24px 0" display="flex" alignItems="baseline">
         <Typography variant="h3" component="h1">
-          A list of (mostly) Greek books
+          A list of books
         </Typography>
         <Box marginLeft="auto">
           <Input onChange={(e) => applyFilter(e)} placeholder="Search" />
