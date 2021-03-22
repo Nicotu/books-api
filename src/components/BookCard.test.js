@@ -22,7 +22,7 @@ it("renders with/without book information", () => {
     render(<BookCard />, container);
   });
 
-  expect(container.textContent).toBe("n/aAuthor:n/aYear:n/a");
+  expect(container.textContent).toBe("n/aAuthor:n/aYear:n/aCountry:n/a");
 });
 
 it("shows a book title, author, and year", () => {
