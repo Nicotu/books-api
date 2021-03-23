@@ -5,8 +5,6 @@ export const fetchBooks = createAsyncThunk(
   async (details) => {
     const { pageNumber, filter } = { ...details };
 
-    console.log(filter);
-
     const requestBody = {
       page: pageNumber,
       itemsPerPage: 20,
@@ -64,8 +62,6 @@ export const bookDataSlice = createSlice({
     },
 
     [fetchBooks.fulfilled]: (state, action) => {
-      console.log(action.payload);
-
       state.status = "succeeded";
       state.books = action.payload.books;
       state.totalPages = Math.ceil(action.payload.count / state.pageLimit);
